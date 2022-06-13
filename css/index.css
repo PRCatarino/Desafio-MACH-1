@@ -226,7 +226,7 @@ footer{
    text-decoration: none;
 }
 footer a {
-   background-image:url(/public/github.gif);
+   background-image:url(public/github.gif);
    text-decoration: none;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
