@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Desafio</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="/css/index.css"/>
-        <link rel="stylesheet" href="/css/class.css"/>
-        <script src="/js/index.js" defer></script>
-        <script src="/js/validaCpf.js" defer></script>
-        <script src="/js/validaEmail.js"defer></script>
+         <title>Desafio</title>
+         <meta charset="UTF-8">
+         <link rel="stylesheet" href="/css/index.css"/>
+         <link rel="stylesheet" href="/css/class.css"/>
+         <link rel="preconnect" href="https://fonts.googleapis.com"/>
+         <link rel="preconnect" href="https://fonts.googleapis.com"/>
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"/>
+         <script src="/js/index.js" defer></script>
+         <script src="/js/validaCpf.js" defer></script>
+         <script src="/js/validaEmail.js"defer></script>
     </head>
     <body>
       <header>
          <div class="container nav-header">
-            <a class="logo" href="#main">MARCH 1</a>
+            <a class="logo" href="/">MARCH 1</a>
             <nav>
                <ul class="group-list-header">
                   <li class="list-header"><a class="animation"href="#dica1">Dica 1</a></li>
@@ -26,9 +30,9 @@
       <main id="main">
          <div class="container cont-main">
             <div class="intro-main">
-               <h1>Este é um teste de programção Frontend</h1>
+               <h1>Este é um teste de programação Frontend</h1>
                <p>Vamos Fazer um cadastro de alunos básicos e uma listagem</p>
-               <button><a href="/">Cadatro aluno</a></button>    <!--tag a dentro do button--> 
+               <a class="buttonPrincipal animation" href="#cadastro">Cadastro de aluno</a> 
             </div>
             <img src="/public/fotoMain.jpg"/>
          </div>
@@ -48,7 +52,7 @@
             <div class="section2-content">
                <h1>Dica 2</h1>
                <p>Cada aluno cadastrado deve aparecer na tabela abaixo do formulário, além da inclusão, crie um método para remover o cadastro.</p>
-               <a href="#cadastro" class="animation">Cadastro aluno</a>
+               <a href="#cadastro" class="buttonPrincipal animation">Cadastro aluno</a>
             </div>
          </div>
       </section>
@@ -72,7 +76,7 @@
                <div class="content-form">
                   <div class="form-registration">
                      <label>CPF</label>
-                     <input maxlength="11" value="" required type="number"placeholder="000.000.000-00" id="cpf"/>
+                     <input onblur="validaCPFTela()" maxlength="11" required type="number" placeholder="000.000.000-00" id="cpf"/>
                      <span class="errorCPF spanErros"></span>
                   </div>
                   
@@ -83,7 +87,7 @@
                   </div>
                </div>
             </div>
-            <button id="button" type="submit" value="Enviar"> Cadastrar </button>
+            <a id="button" type="submit" value="Enviar" href="#" class="buttonPrincipal"> Cadastrar </a>
          </div>
       </form>
       <div class="container">

@@ -2,6 +2,7 @@
    margin:0;
    padding:0;
    outline: 0;
+   font-family: 'Roboto', sans-serif;
 }
 body{
    overflow-y: auto;
@@ -19,6 +20,8 @@ header{
    background-color: white;
    border-bottom: 0.5px solid #d8d8d8;
    top:0;
+   box-shadow: 2px 1px 2px black;
+   box-shadow: 5px 0px 7px black;
 }
 main{
    margin-top: 100px;
@@ -28,12 +31,13 @@ main{
    justify-content: space-between;
    align-items: center;
    height: inherit;
+  
 }
 .nav-header > a{
    font-size: 28px;
    color:black;
    text-decoration: none;
-
+   padding: 5px;
 }
 .logo{
    font-family: fantasy;
@@ -80,7 +84,7 @@ main{
    font-family: monospace;
    margin-bottom: 66px;
 }
-button{
+ .buttonPrincipal{
    background-color: #3F53D9;
    border:none;
    border-radius:3px;
@@ -88,10 +92,12 @@ button{
    padding: 15px;
    color:white;
    text-transform: uppercase;
-}
-button > a {
    text-decoration: none;
-   color:white;
+   cursor: pointer;
+   transition: padding 0.4s;
+}
+.buttonPrincipal:hover{
+   padding:15px 20px;
 }
 .cont-section {
    display: flex;
@@ -166,7 +172,8 @@ button > a {
 .form-registration > label{
    text-align: start;
    margin: 20px 0 15px 0;
-   font-size: 20px;
+   font-size: 23px;
+   font-weight: 700;
 }
 .form-registration > input{
    padding: 5px;
@@ -174,7 +181,7 @@ button > a {
    height: 40px;
    border-radius: 5px;
    border: 2px solid #808080;
-   
+   font-weight: 700;
 }
 .form-registration > input{
    border: 2px solid #808080;
@@ -223,4 +230,7 @@ footer a {
    text-decoration: none;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
+}
+.spanErros{
+   text-align: start;
 }

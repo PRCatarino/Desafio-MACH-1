@@ -29,9 +29,15 @@ function scrollToPosition(to){
       behavior: "smooth",
    });
 }
-
-
-
+function validador(){
+   if(validarCPFTela() == false){
+      return false
+   }
+   if(validarEmail()== false){
+      return false
+   }
+   return true
+}
 function adicionar(evento){
 
    evento.preventDefault();
@@ -41,14 +47,10 @@ function adicionar(evento){
    let cpf    = document.getElementById('cpf').value;
    let curso  = document.getElementById('curso').value;
 
-
-   if(validarCPFTela()  == false){
-      
-      return
-   }
-   if(validarEmail()== false){
-      return
-   }
+   if(validador() == false){
+      return 
+   } 
+  
 
    const cpfs = [...document.querySelectorAll('.linha-cpf')].map(item => item.innerText);
 
@@ -74,7 +76,14 @@ function adicionar(evento){
    document.querySelector('#lista-alunos').appendChild(item);
 
    id++
-            
+      limpaTela() 
+}
+function limpaTela(){
+   document.getElementById('name').value = "";
+   document.getElementById('email').value= "";
+   document.getElementById('cpf').value= "";
+   document.getElementById('curso').value= "";
+
 }
 function excluirItem(id){
    document.querySelector(`#linha-${id}`).remove();
