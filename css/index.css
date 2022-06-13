@@ -3,6 +3,9 @@
    padding:0;
    outline: 0;
 }
+body{
+   overflow-y: auto;
+}
 .container{
    margin:0 auto;
    max-width: 1280px;
@@ -60,7 +63,7 @@ main{
    width: 50%;
    border-radius:5px;
    max-height: 400px;
-   min-width: 400px;
+   min-width: 300px;
 }
 .intro-main{
    width: 45%;

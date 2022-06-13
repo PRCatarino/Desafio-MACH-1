@@ -3,7 +3,11 @@
     <head>
         <title>Desafio</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="/index.css"/>
+        <link rel="stylesheet" href="/css/index.css"/>
+        <link rel="stylesheet" href="/css/class.css"/>
+        <script src="/js/index.js" defer></script>
+        <script src="/js/validaCpf.js" defer></script>
+        <script src="/js/validaEmail.js"defer></script>
     </head>
     <body>
       <header>
@@ -15,7 +19,6 @@
                   <li class="list-header"><a href="#dica2">Dica 2</a></li>
                   <li class="list-header"><a href="#cadastro">Cadastro</a></li>
                   <li class="list-header"><a href="#lista-alunos">Lista de alunos</a></li>
-                  <script src="/index.js" defer></script>
                </ul>
             </nav>
          </div>
@@ -56,13 +59,13 @@
                <div class="content-form">
                   <div class="form-registration">
                      <label>Nome</label>
-                     <input required type="text"placeholder="Digite o nome do aluno" id="name"/>
-                     <span class="errorName"></span>
+                     <input required type="text" placeholder="Digite o nome do aluno" id="name"/>
+                     <span class="errorName spanErros"></span>
                   </div>
                   <div class="form-registration">
-                     <label>Email</label>
-                     <input id="email" type="text" name="email"  placeholder="email.test" maxlength="60" size='65'>
-                     <span class="errorEmail"></span>
+                     <label for="email" >Email</label>
+                     <input placeholder="email" type="email" onblur="validarEmail()" onfocus="redefinirMsg()" id="email"/>
+                     <span id="error-email spanErros"></span>
                   </div>
                </div>
 
@@ -70,13 +73,13 @@
                   <div class="form-registration">
                      <label>CPF</label>
                      <input maxlength="11" value="" required type="number"placeholder="000.000.000-00" id="cpf"/>
-                     <span class="errorCPF"></span>
+                     <span class="errorCPF spanErros"></span>
                   </div>
                   
                   <div class="form-registration">
                      <label>Curso</label>
                      <input value="" required type="text"placeholder="Curso do aluno" id="curso"/>
-                     <span class="errorCurso"></span>
+                     <span class="errorCurso spanErros"></span>
                   </div>
                </div>
             </div>
@@ -84,20 +87,13 @@
          </div>
       </form>
       <div class="container">
-         <table id="to-do-list">
+         <table id="lista-alunos">
             <tr>
                <th>nome</th>
                <th>Email</th>
                <th>CPF</th>
                <th>Curso</th>
                <th></th>
-            </tr>
-            <tr>
-               <td>nome</td>
-               <td>Email</td>
-               <td>CPF</td>
-               <td>Curso</td>
-               <td><img class="ImgDeleta"src="/public/lixo.svg"/></td>
             </tr>
          </table>
       </div>   
