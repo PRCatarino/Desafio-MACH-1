@@ -15,6 +15,7 @@
                   <li class="list-header"><a href="#dica2">Dica 2</a></li>
                   <li class="list-header"><a href="#cadastro">Cadastro</a></li>
                   <li class="list-header"><a href="#lista-alunos">Lista de alunos</a></li>
+                  <script src="/index.js" defer></script>
                </ul>
             </nav>
          </div>
@@ -48,36 +49,42 @@
             </div>
          </div>
       </section>
-      <form id="cadastro">
+      <form class="cadatro" id="cadastro">
          <div class="container cont-form">
             <h1>Cadastro Aluno</h1>
             <div>
                <div class="content-form">
                   <div class="form-registration">
                      <label>Nome</label>
-                     <input placeholder="Digite o nome do aluno" id="name"/>
+                     <input required type="text"placeholder="Digite o nome do aluno" id="name"/>
+                     <span class="errorName"></span>
                   </div>
                   <div class="form-registration">
                      <label>Email</label>
-                     <input placeholder="email.teste"/>
+                     <input id="email" type="text" name="email"  placeholder="email.test" maxlength="60" size='65'>
+                     <span class="errorEmail"></span>
                   </div>
                </div>
+
                <div class="content-form">
                   <div class="form-registration">
                      <label>CPF</label>
-                     <input placeholder="000.000.000-00"/>
+                     <input maxlength="11" value="" required type="number"placeholder="000.000.000-00" id="cpf"/>
+                     <span class="errorCPF"></span>
                   </div>
+                  
                   <div class="form-registration">
                      <label>Curso</label>
-                     <input placeholder="Curso do aluno"/>
+                     <input value="" required type="text"placeholder="Curso do aluno" id="curso"/>
+                     <span class="errorCurso"></span>
                   </div>
                </div>
             </div>
-            <button type="submit">Cadastrar</button>
+            <button id="button" type="submit" value="Enviar"> Cadastrar </button>
          </div>
       </form>
       <div class="container">
-         <table id="lista-alunos">
+         <table id="to-do-list">
             <tr>
                <th>nome</th>
                <th>Email</th>
@@ -101,6 +108,5 @@
          </div>
       </footer>
     </body>
-    <script src="/index.js"></script>
 </html>
 
