@@ -15,10 +15,10 @@
             <a class="logo" href="#main">MARCH 1</a>
             <nav>
                <ul class="group-list-header">
-                  <li class="list-header"><a href="#dica1">Dica 1</a></li>
-                  <li class="list-header"><a href="#dica2">Dica 2</a></li>
-                  <li class="list-header"><a href="#cadastro">Cadastro</a></li>
-                  <li class="list-header"><a href="#lista-alunos">Lista de alunos</a></li>
+                  <li class="list-header"><a class="animation"href="#dica1">Dica 1</a></li>
+                  <li class="list-header"><a class="animation"href="#dica2">Dica 2</a></li>
+                  <li class="list-header"><a class="animation"href="#cadastro">Cadastro</a></li>
+                  <li class="list-header"><a class="animation"href="#lista-alunos">Lista de alunos</a></li>
                </ul>
             </nav>
          </div>
@@ -48,7 +48,7 @@
             <div class="section2-content">
                <h1>Dica 2</h1>
                <p>Cada aluno cadastrado deve aparecer na tabela abaixo do formulário, além da inclusão, crie um método para remover o cadastro.</p>
-               <button>Cadastro aluno</button>
+               <a href="#cadastro" class="animation">Cadastro aluno</a>
             </div>
          </div>
       </section>
@@ -64,8 +64,8 @@
                   </div>
                   <div class="form-registration">
                      <label for="email" >Email</label>
-                     <input placeholder="email" type="email" onblur="validarEmail()" onfocus="redefinirMsg()" id="email"/>
-                     <span id="error-email spanErros"></span>
+                     <input placeholder="email"type="email" onblur="validarEmail()" onfocus="redefinirMsg()" id="email"/>
+                     <span id="error-email"></span>
                   </div>
                </div>
 

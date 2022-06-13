@@ -40,10 +40,9 @@ function validarCPFTela(){
    let cpf = document.querySelector('#cpf').value 
 
    if(validarCPF(cpf) == true){
-      
       return true
    }else{
-      document.querySelector('.errorCPF').innerHTML = 'CPF invalido'
+      document.querySelector('.errorCPF').innerHTML = "CPF invalido"
       return false
    }
 }

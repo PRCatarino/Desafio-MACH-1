@@ -1,4 +1,4 @@
-const menuItems = document.querySelectorAll('.nav-header a[href^="#"]');
+const menuItems = document.querySelectorAll('.animation');
 let button = document.querySelector('#button');
 let nameDigitado = document.querySelector('#name');
 let id = 0
@@ -43,9 +43,20 @@ function adicionar(evento){
 
 
    if(validarCPFTela()  == false){
+      
       return
    }
-   
+   if(validarEmail()== false){
+      return
+   }
+
+   const cpfs = [...document.querySelectorAll('.linha-cpf')].map(item => item.innerText);
+
+   if(cpfs.indexOf(cpf) > -1){
+      alert('CPF já cadastrado');
+      return
+
+   }
 
    const item  = document.createElement('tr');
       
@@ -56,7 +67,7 @@ function adicionar(evento){
    item.innerHTML = `
    <td>${nome}</td>
    <td>${login}</td>
-   <td>${cpf}</td>
+   <td class="linha-cpf">${cpf}</td>
    <td>${curso}</td>
    <td><img onclick="javaScript:excluirItem(${id})"class="ImgDeleta"src="/public/lixo.svg"/></td>
    `
