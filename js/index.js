@@ -1,15 +1,13 @@
 const menuItems = document.querySelectorAll('.animation');
-let button = document.querySelector('#button');
+let addButton = document.querySelector('#buttonAdicionar');
 let nameDigitado = document.querySelector('#name');
 let id = 0
 
 
-
-const listaUsuario = []
-
-
 menuItems.forEach(item =>{
+
    item.addEventListener('click', scrollToIdOnclick);
+
 })
 
 function getScrollTopByHref(element){
@@ -29,6 +27,7 @@ function scrollToPosition(to){
       behavior: "smooth",
    });
 }
+
 function validador(){
    if(validarCPFTela() == false){
       return false
@@ -38,6 +37,7 @@ function validador(){
    }
    return true
 }
+
 function adicionar(evento){
 
    evento.preventDefault();
@@ -67,17 +67,19 @@ function adicionar(evento){
 
    item.classList.add('todo_item');
    item.innerHTML = `
-   <td>${nome}</td>
-   <td>${login}</td>
-   <td class="linha-cpf">${cpf}</td>
-   <td>${curso}</td>
-   <td><img onclick="javaScript:excluirItem(${id})"class="ImgDeleta"src="/public/lixo.svg"/></td>
+      <td>${nome}</td>
+      <td>${login}</td>
+      <td class="linha-cpf">${cpf}</td>
+      <td>${curso}</td>
+      <td><img onclick="javaScript:excluirItem(${id})"class="ImgDeleta"src="public/lixo.svg"/></td>
    `
    document.querySelector('#lista-alunos').appendChild(item);
+   
+   limpaTela() 
 
    id++
-      limpaTela() 
 }
+
 function limpaTela(){
    document.getElementById('name').value = "";
    document.getElementById('email').value= "";
@@ -85,9 +87,12 @@ function limpaTela(){
    document.getElementById('curso').value= "";
 
 }
+
+
 function excluirItem(id){
    document.querySelector(`#linha-${id}`).remove();
 }
+
 
 nameDigitado.addEventListener("keypress", function(e){
    const keyCode = (e.keyCode ? e.keyCode : e.wich);
@@ -96,7 +101,7 @@ nameDigitado.addEventListener("keypress", function(e){
    }
 })
 
-button.addEventListener('click', adicionar);
+addButton.addEventListener('click', adicionar);
 
 
 			  

@@ -41,8 +41,11 @@ function validarCPFTela(){
 
    if(validarCPF(cpf) == true){
       return true
-   }else{
+
+   } else {
+
       document.querySelector('.errorCPF').innerHTML = "CPF invalido"
       return false
+		
    }
 }
