@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Desafio</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/index.css"/>
+    </head>
+    <body>
+      <header>
+         <div class="container nav-header">
+            <a class="logo" href="#main">MARCH 1</a>
+            <nav>
+               <ul class="group-list-header">
+                  <li class="list-header"><a href="#dica1">Dica 1</a></li>
+                  <li class="list-header"><a href="#dica2">Dica 2</a></li>
+                  <li class="list-header"><a href="#cadastro">Cadastro</a></li>
+                  <li class="list-header"><a href="#lista-alunos">Lista de alunos</a></li>
+               </ul>
+            </nav>
+         </div>
+      </header>
+      <main id="main">
+         <div class="container cont-main">
+            <div class="intro-main">
+               <h1>Este é um teste de programção Frontend</h1>
+               <p>Vamos Fazer um cadastro de alunos básicos e uma listagem</p>
+               <button><a href="/">Cadatro aluno</a></button>    <!--tag a dentro do button--> 
+            </div>
+            <img src="/public/fotoMain.jpg"/>
+         </div>
+      </main>
+      <section id="dica1">
+         <div class="container cont-section">
+            <h1>Dica 1</h1>
+            <div>
+               <img src="/public/section-img.jpg"/>
+               <img src="/public/section-img2.jpg"/>
+            </div>
+         </div>
+      </section>
+      <section id="dica2">
+         <div class="container cont-section2">
+            <img src="/public/section3.jpg" />
+            <div class="section2-content">
+               <h1>Dica 2</h1>
+               <p>Cada aluno cadastrado deve aparecer na tabela abaixo do formulário, além da inclusão, crie um método para remover o cadastro.</p>
+               <button>Cadastro aluno</button>
+            </div>
+         </div>
+      </section>
+      <form id="cadastro">
+         <div class="container cont-form">
+            <h1>Cadastro Aluno</h1>
+            <div>
+               <div class="content-form">
+                  <div class="form-registration">
+                     <label>Nome</label>
+                     <input placeholder="Digite o nome do aluno" id="name"/>
+                  </div>
+                  <div class="form-registration">
+                     <label>Email</label>
+                     <input placeholder="email.teste"/>
+                  </div>
+               </div>
+               <div class="content-form">
+                  <div class="form-registration">
+                     <label>CPF</label>
+                     <input placeholder="000.000.000-00"/>
+                  </div>
+                  <div class="form-registration">
+                     <label>Curso</label>
+                     <input placeholder="Curso do aluno"/>
+                  </div>
+               </div>
+            </div>
+            <button type="submit">Cadastrar</button>
+         </div>
+      </form>
+      <div class="container">
+         <table id="lista-alunos">
+            <tr>
+               <th>nome</th>
+               <th>Email</th>
+               <th>CPF</th>
+               <th>Curso</th>
+               <th></th>
+            </tr>
+            <tr>
+               <td>nome</td>
+               <td>Email</td>
+               <td>CPF</td>
+               <td>Curso</td>
+               <td><img class="ImgDeleta"src="/public/lixo.svg"/></td>
+            </tr>
+         </table>
+      </div>   
+      </div>
+      <footer>
+         <div class="container">
+            <h2>Feito por <a href="https://github.com/PRCatarino">PRCatarino.</a></h2>
+         </div>
+      </footer>
+    </body>
+    <script src="/index.js"></script>
+</html>
+
